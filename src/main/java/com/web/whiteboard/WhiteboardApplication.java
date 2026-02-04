@@ -8,6 +8,8 @@ public class WhiteboardApplication {
 
     public static void main(String[] args) {
         SpringApplication.run (WhiteboardApplication.class, args);
+
+
     }
 
 }

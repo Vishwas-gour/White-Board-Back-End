@@ -3,6 +3,9 @@ package com.web.whiteboard.modal;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.Instant;
 
 @Entity
 @Getter
@@ -26,4 +29,9 @@ public class WhiteboardEvent {
     private String color;
     private int lineWidth;
     private String tool; // draw | erase
+
+    @CreationTimestamp
+    @Column(nullable = false, updatable = false)
+    private Instant createdAt;
+
 }
